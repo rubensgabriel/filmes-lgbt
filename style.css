@@ -1,0 +1,24 @@
+@charset 'UTF-8';
+body{
+    background-color: rgb(71, 160, 211);
+}
+main{
+    margin: auto;
+    text-align: left;
+    width: 700px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 7px 5px;
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+img{
+    margin: 0px;
+    width: 700px;
+    padding: 0px;
+}
+header{margin: 0px;
+}
+h2,h1{
+    text-align: center;
+}
