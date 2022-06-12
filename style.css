@@ -1,83 +1,129 @@
-@charset 'UTF-8';
-@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Poppins:wght@300;600&display=swap')
-;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Zilla+Slab:wght@300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-*{
-    margin: 0px;
-    padding: 0px;
+html {
+  scroll-behavior: smooth;
 }
-body{
-    background-color: rgb(191, 207, 216);
-    background-image: url(imagens/pexels-ella-olsson-1640774.jpg);
-    background-size: cover;
-    background-position: center center;
-}
-header{
-    background-color: rgb(204, 116, 1);
-    height: 70px;
-    margin-top: 15px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 20px;
-}
-header > a#titulo{
-    font-size: 3em;
-    padding-top: 2px;
-    font-family: Fredericka the Great;
-}
-header> a{
-    color: aliceblue;
-    text-decoration: none;
-    font-size: 1.4em;
-}
-main{
-    margin: auto;
-    text-align: left;
-    max-width: 750px;
-    min-width: 300px;
-    background-color: white;
-    border-radius: 5px;
-    padding: 20px 10px;
-    margin-top: 30px;
-    margin-bottom: 70px;
-    box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.493);
-    font-family: Zilla Slab;
-    line-height: 2em;
-}
-li{
-    margin-left: 25px;
-}
-h1{
-    font-size: 2.2em;
-}
-h1,h2{
-    font-family: Akaya Telivigala;
-    text-align: center;
-}
-div{
-    background-image: url(imagens/pexels-pixabay-45202.jpg);
-    max-width: 750px;
-    height: 450px;
-    min-width: 300px;
-    background-position: center center;
-    background-repeat: no-repeat;
 
-    background-size: cover;
-    margin: 15px -10px;
+img {
+  max-width: 100%;
+  display: block;
+  height: 250px;
+}
+
+body {
+  font-family: Roboto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Logo ---------------- */
+header {
+  padding: 10px;
+  background: #141414;
+}
+
+#logo {
+  font-size: 6rem; 
+  font-weight: bold;
+
+  text-align: center;
+}
+
+#logo a {
+  display: inline-block;
+  transition-duration: 0.3s;
+}
+
+#l{
+    color: #E40203;
+}
+#g{
+    color: #FF8C01;
+}
+#b{
+    color: #FEED01;
+}
+#t{
+    color: #004DFE;
+}
+
+#l:hover, #g:hover, #b:hover, #t:hover{
+  transform: scale(1.1);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+#l:hover{
+    background-image: url(imagens/lesbica.png);
+}
+#g:hover{
+    background-image: url(imagens/gay.png);
+}
+#b:hover{
+    background-image: url(imagens/bi.jpg);
+}
+#t:hover{
+    background-image: url(imagens/Trans.png); 
+}
+
+/* Section dos filmes ------------------ */
+section h2 {
+  text-align: center;
+  margin: 25px 0px;
+}
+
+.filmes {
+  max-width: 1100px;
+  margin-inline: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20p;
+}
+
+.filme h3 {
+  margin: 10px 0;
+}
+
+.filme{
+    max-width: 200px;
     padding: 10px;
+    margin-bottom: 20px;
+    
+    /* margin-right: 20px; */
+    
+    position: relative;
 }
-footer{
-    text-align: center;
-    background-color: rgb(204, 116, 1);
-    color: white;
-    padding: 6px;
+
+.filme .nota {
+  position: absolute;
+  background: yellow;
 }
-footer > a{
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+
+/* responsivo ----- */
+@media (max-width: 600px) {
+  #logo {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .filme {
+    width: 150px;
+    margin-right: 5px;
+    padding: 5px;
+  }
+  img{
+    height: 200px;
+  }
 }
